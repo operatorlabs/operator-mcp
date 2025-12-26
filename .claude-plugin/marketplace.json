@@ -1,0 +1,41 @@
+{
+  "name": "operator-agent",
+  "owner": {
+    "name": "Operator Research"
+  },
+  "metadata": {
+    "description": "Operator is an adaptive search system for coding agents. It routes documentation lookups and debugging questions through multi-source web search and returns concise answers with grounded source links and code-ready details.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "operator-agent",
+      "source": "./",
+      "description": "A Claude Code plugin that registers the Operator MCP server, giving coding agents an adaptive, difficulty-aware search assistant. Operator analyzes queries, fans out to documentation, GitHub issues, forums, and more, and returns answers with supporting sources so agents can resolve bugs, API questions, and upgrades with minimal hallucinations.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Operator Research"
+      },
+      "repository": "https://github.com/operatorlabs/operator-mcp",
+      "category": "productivity",
+      "strict": false,
+      "keywords": [
+        "mcp",
+        "operator",
+        "search",
+        "code-search",
+        "debugging",
+        "documentation"
+      ],
+      "mcpServers": {
+        "operator": {
+          "type": "http",
+          "url": "https://mcp.operator.io/mcp",
+          "headers": {
+            "Authorization": "Bearer ${OPERATOR_API_KEY}"
+          }
+        }
+      }
+    }
+  ]
+}
