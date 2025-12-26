@@ -1,5 +1,5 @@
 {
-  "name": "operator-agent",
+  "name": "operator-mcp",
   "owner": {
     "name": "Operator Research"
   },
@@ -9,7 +9,7 @@
   },
   "plugins": [
     {
-      "name": "operator-agent",
+      "name": "operator-mcp",
       "source": "./",
       "description": "A Claude Code plugin that registers the Operator MCP server, giving coding agents an adaptive, difficulty-aware search assistant. Operator analyzes queries, fans out to documentation, GitHub issues, forums, and more, and returns answers with supporting sources so agents can resolve bugs, API questions, and upgrades with minimal hallucinations.",
       "version": "0.1.0",
